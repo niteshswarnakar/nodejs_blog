@@ -26,13 +26,19 @@
               <h1><%= article.title %></h1>
               <p><%= article.createdAt.toLocaleString() %></p>
               <h3><%= article.description %></h3>
-              <a href="/articles/<%= article.id %>">See more</a>
+              <a href="/articles/<%= article.slug %>" class="btn btn-success"
+                >See more</a
+              >
+              <form
+                action="/articles/<%= article.id %>?_method=DELETE"
+                method="POST"
+              >
+                <button class="btn btn-danger" type="submit">Delete</button>
+              </form>
             </div>
           </div>
         </div>
         <% }) %>
-
-        <h2><%= context[0].description %></h2>
       </div>
     </div>
   </body>

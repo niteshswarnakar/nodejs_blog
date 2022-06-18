@@ -1,0 +1,4 @@
+GET http://localhost:8000/articles/delete/
+
+###
+GET http://localhost:8000/
